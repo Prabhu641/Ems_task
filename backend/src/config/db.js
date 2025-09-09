@@ -7,14 +7,14 @@ const db = mysql.createConnection({
   host: process.env.DB_HOST,      
   password: process.env.DB_PASSWORD, 
   database: process.env.DB_NAME,  
-  port: Number(process.env.DB_PORT) || 3306,
+  port: Number(process.env.DB_PORT)
 });
 
 db.connect((err) => {
   if (err) {
-    console.error(" Database connection failed:", err.message);
+    console.error("Database connection failed:", err.message);
   } else {
-    console.log(" Database connected!");
+    console.log("Database connected!");
   }
 });
 
